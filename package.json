@@ -1,7 +1,7 @@
 {
   "name": "server",
   "version": "1.0.0",
-  "description": "b weather server side application",
+  "description": "server side application, Express JS PassportJS JWT Mongoose",
   "main": "app.js",
   "scripts": {
     "start": "nodemon ./bin/www --exec  \"npm run lint && node\"",

@@ -13,7 +13,7 @@ router.post('/signup', (req, res)=> {
   } else {
     var newUser = new User({
       username: req.body.username,
-      password: req.body.password
+      password: req.body.password,
       privateKey: req.body.privateKey,
       role:"USER"
       });

@@ -4,7 +4,7 @@
   "description": "server side application, Express JS PassportJS JWT Mongoose",
   "main": "app.js",
   "scripts": {
-    // "start": "nodemon ./bin/www --exec  \"npm run lint && node\"",
+    "start": "nodemon ./bin/www --exec  \"npm run lint && node\"",
     "serve": "nodemon ./bin/www --exec",
     "lint": "eslint ./**/*.js",
     "lint:fix": "eslint ./**/*.js  --fix"
@@ -17,6 +17,7 @@
   "author": "TheRealWaleed <thereal.waleeddridi@gmail.com>",
   "license": "ISC",
   "dependencies": {
+    "@sendgrid/mail": "^6.4.0",
     "bcrypt-nodejs": "0.0.3",
     "body-parser": "^1.18.2",
     "cookie-parser": "^1.4.3",

@@ -37,18 +37,18 @@ router.post('/signin', (req, res)=> {
       res.status(401).send({success: false, msg: 'Authentication failed. User not found.'});
     } else {
       // check if password matches
-      user.comparePassword(req.body.password,  (err, isMatch)=> {
-        if (isMatch && !err) {
-          // if user is found and password is right create a token
-          var token = jwt.sign(user, config.passport.secret, {
-            expiresIn: 86400 // 1 day
-          });
-          // return the information including token as JSON
-          res.json({success: true, token: token, user:user});
-        } else {
-          res.status(401).send({success: false, msg: 'Authentication failed. Wrong password.'});
-        }
-      });
+        user.comparePassword(req.body.password,  (err, isMatch)=> {
+          if (isMatch && !err) {
+            // if user is found and password is right create a token
+            var token = jwt.sign(user, config.passport.secret, {
+              expiresIn: 86400 // 1 day
+            });
+            // return the information including token as JSON
+            res.json({success: true, token: token, user:user});
+          } else {
+            res.status(401).send({success: false, msg: 'Authentication failed. Wrong password.'});
+          }
+        });
     }
   });
 });
